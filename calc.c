@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <unistd.h> //  getch()
-#include <termios.h> // getch()
+#include <unistd.h>     //  getch()
+#include <termios.h>    // getch()
+#include <ctype.h>      // isalpha isdigit
 /*
  
 a add
@@ -11,12 +12,15 @@ m multipy
 d divide
 
 */
+
 double  buffer3,
         buffer2,
         buffer1,
         buffery,
         bufferx;
 char tempBuffer[50];
+
+void pressingEnter(char input[50]);
 
 char getch() {
     char buf = 0;
@@ -43,29 +47,32 @@ void clearScreen(){
         printf("\n\n\n\n\n\n\n\n\n\n\n");
     }
 }
-void update(char userInput){
+void refresh(userInputInProgress){
     clearScreen();
     printf("%.15f\n%.15f\n%.15f\n%.15f\n", buffer3,
                                             buffer2,
                                             buffer1,
-                                            buffery,);
-    if (userInput == 'y')
+                                            buffery);
+    if (userInputInProgress == 1)
         printf("%s\n", tempBuffer);
     else
         printf("%.15f\n", bufferx);
 }
 void userInsert(){
     char i;
-    while (1) {
+    char tempBuffer[50] = "";
+    
+    do {
         i = getch();
+//        strcat(tempBuffer, &i);
+        refresh(1);
         
-        
-        
-        if (getchar = 'h')
-            pushEnter(temp
-    }
+    } while (isdigit(i));
+    
+    if (i == 'h') pressingEnter(tempBuffer);
+    
 }
-void pushEnter(char input[50]){
+void pressingEnter(char input[50]){
     
 }
 
@@ -78,7 +85,7 @@ int main() {
     while (1){
         char c = getch();
         if      (c == 'q') break;
-        else if (c == 'u') update('n');
+        else if (c == 'u') refresh(0);
         else if (c == 'i') userInsert();
         else continue;
     }  
