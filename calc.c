@@ -22,6 +22,8 @@ char tempBuffer[50];
 
 void pressingEnter(char input[50]);
 
+char emptyString[1] = "";
+
 char getch() {
     char buf = 0;
     struct termios old = {0};
@@ -47,7 +49,7 @@ void clearScreen(){
         printf("\n\n\n\n\n\n\n\n\n\n\n");
     }
 }
-void refresh(userInputInProgress){
+void refresh(int userInputInProgress, char tempBuffer[50]){
     clearScreen();
     printf("%.15f\n%.15f\n%.15f\n%.15f\n", buffer3,
                                             buffer2,
@@ -59,21 +61,37 @@ void refresh(userInputInProgress){
         printf("%.15f\n", bufferx);
 }
 void userInsert(){
+    pushStack();
     char i;
     char tempBuffer[50] = "";
-    
     do {
         i = getch();
-//        strcat(tempBuffer, &i);
-        refresh(1);
+        size_t len = strlen(tempBuffer);
+        tempBuffer[len++] = i;
+        tempBuffer[len] = '\0';
+        refresh(1, tempBuffer);
         
     } while (isdigit(i));
     
     if (i == 'h') pressingEnter(tempBuffer);
     
 }
-void pressingEnter(char input[50]){
+void pushStack(double = newInsert) {
+    buffer3 = buffer2;
+    buffer2 = buffer1;
+    buffer1 = buffery;
+    bufferx = newInsert;
     
+}
+void collapseStack(double = newInsert) {
+    
+}
+void pressingEnter(char input[50]){
+   //something that makes input a float
+   //bufferx gets updated
+pushStack();
+   bufferx = //new float
+   refresh(0, 
 }
 
 int main() {
@@ -85,7 +103,7 @@ int main() {
     while (1){
         char c = getch();
         if      (c == 'q') break;
-        else if (c == 'u') refresh(0);
+        else if (c == 'u') refresh(0, emptyString);
         else if (c == 'i') userInsert();
         else continue;
     }  
