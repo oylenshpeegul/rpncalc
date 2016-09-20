@@ -32,7 +32,7 @@ Since all operations and number pushes are divided by an enter, it's usually wri
 **3 / -1:**  
 `3 1 c d`
 
-**sqrt(9)^cos(3.4)
+**sqrt(9)^cos(3.4):**  
 `9 t 3.4 i p`
 
 ## Operators
