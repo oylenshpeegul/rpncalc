@@ -4,7 +4,7 @@ This is a RPN Calculator written in C.
 
 ## Basics of RPN
 
-[Istead of writing one myself, I'm just gonna link to a tutorial.](http://www.lehigh.edu/~sgb2/rpnTutor.html)
+[Instead of writing one myself, I'm just gonna link to a tutorial.](http://www.lehigh.edu/~sgb2/rpnTutor.html)
 
 ## The program
 
