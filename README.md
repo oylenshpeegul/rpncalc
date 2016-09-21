@@ -2,6 +2,14 @@
 
 This is a RPN Calculator written in C.
 
+## To Compile
+
+Link the math library (-lm). For example, 
+
+    gcc -o rpncalc rpncalc.c -lm
+or
+    clang -o rpncalc rpncalc.c -lm
+
 ## Basics of RPN
 
 [Istead of writing one myself, I'm just gonna link to a tutorial.](http://www.lehigh.edu/~sgb2/rpnTutor.html)
