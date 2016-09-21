@@ -33,12 +33,12 @@ Since all operations and number pushes are divided by an enter, it's usually wri
 `3 1 c d`
 
 **sqrt(9)^cos(3.4):**  
-`9 t 3.4 i p`
+`9 t 3.4 u p`
 
 ## Operators
 
 * a: add
-* s: subtrackt
+* s: subtract
 * m: multiply
 * d: divide
 * c: change sign
@@ -50,3 +50,7 @@ Since all operations and number pushes are divided by an enter, it's usually wri
 * i: sin
 * o: tan
 * q: quit the program
+
+## Compiling
+
+`gcc rpncalc.c -o rpncalc`
