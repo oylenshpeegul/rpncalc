@@ -2,7 +2,7 @@
 
 This is a RPN Calculator written in C.
 
-![Screenshot](http://github.com/simonsolnes/rpncalc/screenshot.png)
+![Screenshot](https://github.com/simonsolnes/rpncalc/raw/master/screenshot.png)
 
 ## Basics of RPN
 
