@@ -38,7 +38,7 @@ Since all operations and number pushes are divided by an enter, it's usually wri
 ## Operators
 
 * a: add
-* s: subtrackt
+* s: subtract
 * m: multiply
 * d: divide
 * c: change sign
