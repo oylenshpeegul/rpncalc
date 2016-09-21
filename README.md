@@ -2,6 +2,8 @@
 
 This is a RPN Calculator written in C.
 
+(http://github.com/simonsolnes/rpncalc/screenshot.png)
+
 ## Basics of RPN
 
 [Istead of writing one myself, I'm just gonna link to a tutorial.](http://www.lehigh.edu/~sgb2/rpnTutor.html)
