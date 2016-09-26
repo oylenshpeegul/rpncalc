@@ -47,10 +47,11 @@ Since all operations and number pushes are divided by an enter, it's usually wri
 * r: roll stack
 * x: swap Buffer X and Buffer Y
 * t: squareroot
-* p: Buffer Y to the power of Buffer X
+* r: Buffer Y raised to Buffer X
 * u: cos
 * i: sin
 * o: tan
+* p: π
 * q: quit the program
 
 ## Compiling
