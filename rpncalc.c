@@ -32,11 +32,10 @@ int main() {
 
 void userInputMode() {
     char i;
-    double temp;
-    
+    double temp; 
     printf("                   ");
     scanf("%s", &i);
-    
+
     if      (i == 'a') collapseStack(buffery + bufferx);
     else if (i == 's') collapseStack(buffery - bufferx); 
     else if (i == 'm') collapseStack(buffery * bufferx); 
@@ -45,11 +44,12 @@ void userInputMode() {
     else if (i == 'r') rollD(1); 
     else if (i == 'x') swap(1); 
     else if (i == 't') updateBufferx(sqrt(bufferx)); 
-    else if (i == 'p') collapseStack(pow(buffery, bufferx)); //e
+    else if (i == 'e') collapseStack(pow(buffery, bufferx));
     else if (i == 'u') updateBufferx(sin(bufferx)); 
     else if (i == 'i') updateBufferx(cos(bufferx)); 
     else if (i == 'o') updateBufferx(tan(bufferx)); 
     else if (i == 'q') exit(0); 
+    else if (i == 'p') pushStack(3.141592653589793238462); 
     else pushStack(atof(&i));
 }
 void refreshBuffers(){
@@ -84,15 +84,11 @@ void refreshBuffers(){
 }
 
 void spacePrint(double number) {
-
     char buffer[50];
     snprintf(buffer, 50, "%lf", number);
     int numlen = strlen(strtok(buffer,"."));
-
-    
     for (int i = 0; i <= 10 - numlen; i++)
         printf(" ");
-
 }
 
 int numbersBeforeDec(double w) {

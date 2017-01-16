@@ -2,17 +2,20 @@
 
 This is a RPN Calculator written in C.
 
-## To Compile
+![Screenshot](https://github.com/simonsolnes/rpncalc/raw/master/screenshot.png)
 
-Link the math library (-lm). For example, 
+## Compiling
 
-    gcc -o rpncalc rpncalc.c -lm
+ 
+
+`gcc -o rpncalc rpncalc.c -lm`
 or
-    clang -o rpncalc rpncalc.c -lm
+`clang -o rpncalc rpncalc.c -lm`
+
 
 ## Basics of RPN
 
-[Istead of writing one myself, I'm just gonna link to a tutorial.](http://www.lehigh.edu/~sgb2/rpnTutor.html)
+[Instead of writing one myself, I'm just gonna link to a tutorial.](http://www.lehigh.edu/~sgb2/rpnTutor.html)
 
 ## The program
 
@@ -41,20 +44,21 @@ Since all operations and number pushes are divided by an enter, it's usually wri
 `3 1 c d`
 
 **sqrt(9)^cos(3.4):**  
-`9 t 3.4 i p`
+`9 t 3.4 u p`
 
 ## Operators
 
 * a: add
-* s: subtrackt
+* s: subtract
 * m: multiply
 * d: divide
 * c: change sign
 * r: roll stack
 * x: swap Buffer X and Buffer Y
 * t: squareroot
-* p: Buffer Y to the power of Buffer X
+* r: Buffer Y raised to Buffer X
 * u: cos
 * i: sin
 * o: tan
+* p: π
 * q: quit the program
